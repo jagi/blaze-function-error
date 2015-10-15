@@ -1,0 +1,16 @@
+<head>
+  <title>blaze-function-error</title>
+</head>
+
+<body>{{> User}}</body>
+
+<template name="User">
+  <div>{{user.firstName}} {{user.lastName}}</div>
+  <div>{{user.method}}</div>
+  {{#if error}}
+    <div>{{user.method 'Mr.'}}</div>
+  {{/if}}
+  <div>
+    <input type="button" id="refresh" value="Refresh with error">
+  </div>
+</template>
